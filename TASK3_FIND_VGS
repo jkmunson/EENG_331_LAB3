@@ -1,0 +1,24 @@
+To find VGS to place the device in the tride region (where it acts as a resistor) with Ron=500 ohms, start with (6.12):
+	Ron = [K*w/l*Vov]^-1
+	500 = [100u*2*Vov]^-1
+	[500*100u*2]^-1 = Vov -> Vov = 10v
+	Vgs = Vov + Vth = 10.5v
+
+HOWEVER: THIS WILL BE OPERATING TOO CLOSE TO SATURATION FOR GOOD LINEAR APPROXIMATION
+Then consider the full form ID = 1/2k(w/l)[2(Vgs-Vth)Vds-Vds^2]
+Solving with a graphing calculator with Id = 10mA (which would drop 5v across 500 ohm) We get:
+Vgs = 13v
+
+We also are meant to find value that corresponds to a value of Vds = 3v, 2v
+
+For Voltage drop across the fixed 500 ohm:
+|-> V=IR -> 8v = I(500) -> I = 16mA
+|--> V=IR -> 2v = 16mA(Ron)
+|--> Ron = 125 ohms
+
+|-> V=IR -> 7v = I(500) -> I = 14ma
+|--> Ron = 214.3
+
+Then the Vgs for these values is:
+For 2v Vds: Vgs = 41.5v (YES, THIS HIGH)
+For 3v Vds: Vgs = 25.33v

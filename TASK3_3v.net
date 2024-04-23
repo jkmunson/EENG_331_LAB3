@@ -1,0 +1,12 @@
+* Z:\home\jkmunson\workspace\sp24\EENG_331_LAB3\TASK3_3v.asc
+M1 N003 N002 0 0 NMOS
+Vgs N002 0 25.333333
+V1 N001 0 10
+R1 N001 N003 500
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\users\jkmunson\My Documents\LTspiceXVII\lib\cmp\standard.mos
+.model nmos NMOS(kp=100u, vt0=0.5, L=10u, W=20u)
+.op
+.backanno
+.end

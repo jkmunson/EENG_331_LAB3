@@ -1,0 +1,17 @@
+In Task 1: "NMOS Needs to be biased so that it delivered a fixed I value. Here, You will be met with a challenge of choosing a Vds and Vgs values"
+"In your opinion, how those values should be chosen?"
+
+|* Vgs is given to us in the prelab - as we are instructed to use the parameters from the prelab. -> 5v
+|  This is because ONLY a Vgs of 5v will give us the exact Id that is specified, since we set W/L to give the specified Id at VGS=5v
+|-> 5v
+
+| * For choosing Vds, our only requirement is that Vds > Vov, or Vds > 4.5v
+| Vds will change with changing loads, so really we only need to consider the least conductive load we want to allow
+| As this will cause the greatest voltage drop across the load, and the least Vds
+| > This least conductive load is the two 10K resistors in parallel, or 5K.
+| Given that, Id*5k = 10.125v (greatest possible voltage drop across the load)
+| So the source that we add to the circuit (either "above" the resistors, What I call soln 2 in prelab, 
+|  or "below" the resistors, per soln 1) must be:
+| 10.125v + 4.5v = 14.625v
+| -> Choose Vds > 4.5, which forces V1 > 14.625
+(I choose 15v, so that we aren't sitting on the edge of saturation)

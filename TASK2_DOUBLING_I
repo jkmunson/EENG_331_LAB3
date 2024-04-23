@@ -1,0 +1,12 @@
+In order to double the current, we can simply put two mosfets of the same parameters in parallel.
+
+"Theoretically", we already showed that the mosfet acts as a current source. 
+	Two current sources of the same value in parallel will obviously produce
+	a current that is the sum of their individual values.
+
+In physics terms, this is no different than modifying W/L to have twice the width.
+
+IMPORTANT: We must change the added voltage source (V1) to cover the additional voltage drop across the load;
+	If we do not then the device will not remain in saturation.
+
+|* New V1 Value: 10.125*2 + 4.5 = 24.75V minimum. Choose 25v.
